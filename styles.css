@@ -1,10 +1,17 @@
+.heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
 #new-todo-form {
   display: flex;
   flex-direction: column;
 }
 
 #new-todo-form > * {
-  margin: .15rem;
+  margin: 0.15rem;
 }
 
 #list {
@@ -27,13 +34,34 @@
 
 [data-list-item-checkbox]:checked ~ [data-list-item-text] {
   text-decoration: line-through;
-  color: #AAA;
+  color: #aaa;
 }
 
 [data-button-delete] {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 button {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+  #new-todo-form {
+    width: 70%;
+    margin: 40px auto;
+  }
+
+  #list {
+    width: 70%;
+
+    margin: auto;
+  }
+
+  .list-item-label {
+    padding: 10px;
+  }
 }
